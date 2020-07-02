@@ -35,7 +35,7 @@ todoRoutes.route('/add').post(function(req,res) {
 
 todoRoutes.route('/update/:id').post((req,res) => {
     Todo.findById(req.params.id, (err, todos) => {
-        if(!todo){
+        if(!todos){
             res.status(404).send('data is not found');
         }
         else{
@@ -54,4 +54,3 @@ todoRoutes.route('/update/:id').post((req,res) => {
     });
 });
 module.exports =todoRoutes;
-https://www.youtube.com/watch?v=WT67-OETeGU
